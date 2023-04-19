@@ -3,6 +3,6 @@ kind: Kustomization
 namespace: staging
 resources:
   - namespace.yaml
-  - ../base/podinfo
+  - ./base/podinfo
 patchesStrategicMerge:
   - podinfo-values.yaml
