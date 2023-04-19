@@ -3,4 +3,4 @@ kind: Kustomization
 namespace: staging
 resources:
   - namespace.yaml
-  - ./deploy/base/podinfo
+  - ../deploy/base/podinfo
