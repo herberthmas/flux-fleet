@@ -19,7 +19,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 0m30s
-  path: deploy/staging
+  path: ./deploy/staging
   prune: true
   sourceRef:
     kind: GitRepository
