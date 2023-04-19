@@ -9,6 +9,7 @@ spec:
   ref:
     branch: master
   url: https://github.com/herberthmas/flux-staging
+  secretRef: flux-bootstrap-genkey
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
