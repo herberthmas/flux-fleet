@@ -8,7 +8,7 @@ spec:
   interval: 30s
   url: https://github.com/herberthmas/flux-fleet
   ref:
-    branch: main
+    branch: master
   #secretRef: flux-bootstrap-genkey
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
@@ -18,7 +18,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 0m30s
-  path: "./deploy/staging"
+  path: ./deploy/staging
   prune: true
   sourceRef:
     kind: GitRepository
