@@ -1,0 +1,24 @@
+apiversion source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: staging
+  namespace: flux-system
+spec:
+  interval: 2m
+  url: https://github.com/herberthmas/flux-staging
+  ref:
+    branch: master
+
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: staging
+  namespace: flux-system
+spec:
+  interval: 2m
+  path: ./
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: staging
+  valiation: client
